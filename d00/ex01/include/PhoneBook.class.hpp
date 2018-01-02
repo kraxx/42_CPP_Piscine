@@ -1,5 +1,5 @@
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef PHONEBOOK_CLASS_HPP
+# define PHONEBOOK_CLASS_HPP
 
 # include <string>
 # include <iostream>

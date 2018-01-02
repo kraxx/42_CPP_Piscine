@@ -26,7 +26,7 @@ OBJ_DIR =		obj/
 OBJ_O =			$(addsuffix .o, $(SRC))
 OBJ_FILES =		$(addprefix $(OBJ_DIR), $(OBJ_O))
 
-HDR_DIR =		includes/
+HDR_DIR =		include/
 HDR_H =			$(addsuffix .h, $(HDR))
 HDR_FILES = 	$(addprefix $(HDR_DIR), $(HDR_H))
 
