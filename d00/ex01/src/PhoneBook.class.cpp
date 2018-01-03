@@ -5,75 +5,75 @@ PhoneBook::PhoneBook() {};
 PhoneBook::~PhoneBook() {};
 
 std::string PhoneBook::getFirstName() {
-    return this->firstName;
+    return _firstName;
 }
 
 std::string PhoneBook::getLastName() {
-    return this->lastName;
+    return _lastName;
 }
 
 std::string PhoneBook::getNickName() {
-    return this->nickName;
+    return _nickName;
 }
 
 std::string PhoneBook::getLogin() {
-    return this->login;
+    return _login;
 }
 
 std::string PhoneBook::getPostalAddress() {
-    return this->postalAddress;
+    return _postalAddress;
 }
 
 std::string PhoneBook::getEmailAddress() {
-    return this->emailAddress;
+    return _emailAddress;
 }
 
 std::string PhoneBook::getPhoneNumber() {
-    return this->phoneNumber;
+    return _phoneNumber;
 }
 
 std::string PhoneBook::getBirthDate() {
-    return this->birthDate;
+    return _birthDate;
 }
 
 std::string PhoneBook::getFavouriteMeal() {
-    return this->favouriteMeal;
+    return _favouriteMeal;
 }
 
 std::string PhoneBook::getUnderwearColour() {
-    return this->underwearColour;
+    return _underwearColour;
 }
 
 std::string PhoneBook::getDarkestSecret() {
-    return this->darkestSecret;
+    return _darkestSecret;
 }
 
 void PhoneBook::addContact() {
     std::cout << "Alright darling, may I have your...\n"LOVE"First Name"HATE": ";
-    getline(std::cin, this->firstName);
+    getline(std::cin, _firstName);
     std::cout << LOVE"Last Name"HATE": ";
-    getline(std::cin, this->lastName);
+    getline(std::cin, _lastName);
     std::cout << LOVE"Nickname"HATE": ";
-    getline(std::cin, this->nickName);
+    getline(std::cin, _nickName);
     std::cout << LOVE"Login"HATE": ";
-    getline(std::cin, this->login);
+    getline(std::cin, _login);
     std::cout << LOVE"Postal Address"HATE": ";
-    getline(std::cin, this->postalAddress);
+    getline(std::cin, _postalAddress);
     std::cout << LOVE"E-mail Address"HATE": ";
-    getline(std::cin, this->emailAddress);
+    getline(std::cin, _emailAddress);
     std::cout << LOVE"Phone Number"HATE": ";
-    getline(std::cin, this->phoneNumber);
+    getline(std::cin, _phoneNumber);
     std::cout << LOVE"Birthdate"HATE": ";
-    getline(std::cin, this->birthDate);
+    getline(std::cin, _birthDate);
     std::cout << LOVE"Favourite Meal"HATE": ";
-    getline(std::cin, this->favouriteMeal);
+    getline(std::cin, _favouriteMeal);
     std::cout << LOVE"Underwear Colour"HATE": ";
-    getline(std::cin, this->underwearColour);
+    getline(std::cin, _underwearColour);
     std::cout << LOVE"Deepest, "BOLD"DARKEST"DIM" Secret ;) "HATE;
-    getline(std::cin, this->darkestSecret);
+    getline(std::cin, _darkestSecret);
     if (std::cin.eof()) {
         std::cerr << "\nUnexpected EOF during entry, terminating program :(" << std::endl;
         return;
     }
-    std::cout << "The lovely "LOVE << this->getFirstName() << " " << this->getLastName() << HATE"'s contact information has been saved into the book "LOVE"<3"HATE << std::endl;
+    std::cout << "The lovely "LOVE << getFirstName() << " " << getLastName() << HATE"'s contact information has been saved into the book "LOVE"<3"HATE << std::endl;
 };

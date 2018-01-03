@@ -37,17 +37,17 @@ void printListing(int n, PhoneBook phonebook[]) {
 
 void printEntry(int i, PhoneBook phonebook) {
     std::cout << LOVE"The dirty deets on entry "HATE << i << ":" << std::endl
-    << "First Name: " << phonebook.getFirstName() << std::endl
-    << "Last Name: " << phonebook.getLastName() << std::endl
-    << "Nickname: " << phonebook.getNickName() << std::endl
-    << "Login: " << phonebook.getLogin() << std::endl
-    << "Postal Address: " << phonebook.getPostalAddress() << std::endl
-    << "E-mail Address: " << phonebook.getEmailAddress() << std::endl
-    << "Phone Number: " << phonebook.getPhoneNumber() << std::endl
-    << "Birthdate: " << phonebook.getBirthDate() << std::endl
-    << "Favourite Meal: " << phonebook.getFavouriteMeal() << std::endl
-    << "Underwear Colour: " << phonebook.getUnderwearColour() << std::endl
-    << "Deepest, Darkest Secret: " << phonebook.getDarkestSecret() << std::endl;
+    << LOVE"First Name"HATE": " << phonebook.getFirstName() << std::endl
+    << LOVE"Last Name"HATE": " << phonebook.getLastName() << std::endl
+    << LOVE"Nickname"HATE": " << phonebook.getNickName() << std::endl
+    << LOVE"Login"HATE": " << phonebook.getLogin() << std::endl
+    << LOVE"Postal Address"HATE": " << phonebook.getPostalAddress() << std::endl
+    << LOVE"E-mail Address"HATE": " << phonebook.getEmailAddress() << std::endl
+    << LOVE"Phone Number"HATE": " << phonebook.getPhoneNumber() << std::endl
+    << LOVE"Birthdate"HATE": " << phonebook.getBirthDate() << std::endl
+    << LOVE"Favourite Meal"HATE": " << phonebook.getFavouriteMeal() << std::endl
+    << LOVE"Underwear Colour"HATE": " << phonebook.getUnderwearColour() << std::endl
+    << LOVE"Deepest, "BOLD"Darkest"DIM" Secret"HATE": " << phonebook.getDarkestSecret() << std::endl;
 }
 
 void searchBook(int n, PhoneBook phonebook[]) {

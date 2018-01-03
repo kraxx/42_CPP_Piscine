@@ -5,17 +5,17 @@
 # include <iostream>
 
 class PhoneBook {
-    std::string firstName;
-    std::string lastName;
-    std::string nickName;
-    std::string login;
-    std::string postalAddress;
-    std::string emailAddress;
-    std::string phoneNumber;
-    std::string birthDate;
-    std::string favouriteMeal;
-    std::string underwearColour;
-    std::string darkestSecret;
+    std::string _firstName;
+    std::string _lastName;
+    std::string _nickName;
+    std::string _login;
+    std::string _postalAddress;
+    std::string _emailAddress;
+    std::string _phoneNumber;
+    std::string _birthDate;
+    std::string _favouriteMeal;
+    std::string _underwearColour;
+    std::string _darkestSecret;
 
 public:
     PhoneBook();
