@@ -10,6 +10,8 @@ _name(name), _type(type) {
     }
 };
 
+Zombie::Zombie() {};
+
 Zombie::~Zombie() {
     std::cout << "<" << _name << " (" << _type << ")> huarghh... I am die" << std::endl;
 };

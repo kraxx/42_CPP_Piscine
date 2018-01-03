@@ -5,8 +5,6 @@
 # include "Zombie.hpp"
 
 class ZombieEvent {
-
-private:
     static const std::string    _names[10];
     std::string                 _type;
 
