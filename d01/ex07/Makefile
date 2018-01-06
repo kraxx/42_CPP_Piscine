@@ -28,7 +28,7 @@ HDR_DIR =		./
 HDR_H =			$(addsuffix .h, $(HDR))
 HDR_FILES = 	$(addprefix $(HDR_DIR), $(HDR_H))
 
-CC =			g++
+CC =			clang++
 C_FLAGS =		-Wall -Wextra -Werror
 
 RED =				\033[31m

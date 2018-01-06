@@ -7,17 +7,17 @@
 void errorChecks(std::string s1, std::string s2, std::ifstream input, std::ofstream output) {
     if (s1.length() <= 0 || s2.length() <= 0) {
         std::cerr << "Error: empty string input(s)" << std::endl;
-        exit(1);        
+        exit(1);
     } else if (!input) {
-        std::cerr << "Error: invalid file input" << std::endl;
+        std::cerr << "Error: invalid input file" << std::endl;
         exit(1);
     } else if (!output) {
-        std::cerr << "Error: could not create output" << std::endl;
-        exit(1);        
+        std::cerr << "Error: could not create output file" << std::endl;
+        exit(1);
     };
 };
 
-void myplace(std::string file, std::string s1, std::string s2) {
+void myReplace(std::string file, std::string s1, std::string s2) {
 
     // std::ifstream input(file);
     std::ifstream input;
