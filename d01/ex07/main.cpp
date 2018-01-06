@@ -4,7 +4,7 @@
 #include <string>
 #include "stdlib.h"
 
-void errorChecks(std::string s1, std::string s2, std::ifstream input, std::ofstream output) {
+void errorChecks(std::string s1, std::string s2, std::ifstream &input, std::ofstream &output) {
     if (s1.length() <= 0 || s2.length() <= 0) {
         std::cerr << "Error: empty string input(s)" << std::endl;
         exit(1);
@@ -19,22 +19,19 @@ void errorChecks(std::string s1, std::string s2, std::ifstream input, std::ofstr
 
 void myReplace(std::string file, std::string s1, std::string s2) {
 
-    // std::ifstream input(file);
-    std::ifstream input;
-    input = std::fstream::open(file);
-    std::ofstream output(file + ".replace");
+    std::ifstream      input(file);
+    std::ofstream      output(file + ".replace");
     errorChecks(s1, s2, input, output);
 
-    std::string buf;
-    buf << input.rdbuf();
+    std::ostringstream bufStream;
+	bufStream << input.rdbuf();
+
+	std::string        buf = bufStream.str();
 
     while (buf.find(s1) != std::string::npos) {
-        // while (buf.find(s1) != std::string::npos) {
-            buf.replace(buf.find(s1), s1.length(), s2);
-        // }
+		buf.replace(buf.find(s1), s1.length(), s2);
     }
     output << buf << std::endl;
-
     input.close();
     output.close();
 };

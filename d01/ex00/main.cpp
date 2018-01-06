@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Pony.hpp"
 
 void ponyOnTheStack(int age, std::string name, std::string owner) {    
