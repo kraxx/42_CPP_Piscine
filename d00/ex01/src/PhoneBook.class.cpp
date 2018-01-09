@@ -69,7 +69,7 @@ void PhoneBook::addContact() {
     getline(std::cin, _favouriteMeal);
     std::cout << LOVE"Underwear Colour"HATE": ";
     getline(std::cin, _underwearColour);
-    std::cout << LOVE"Deepest, "BOLD"DARKEST"DIM" Secret ;) "HATE;
+    std::cout << LOVE"Deepest, "BOLD"DARKEST"HATE LOVE" Secret ;) "HATE;
     getline(std::cin, _darkestSecret);
     if (std::cin.eof()) {
         std::cerr << "\nUnexpected EOF during entry, terminating program :(" << std::endl;

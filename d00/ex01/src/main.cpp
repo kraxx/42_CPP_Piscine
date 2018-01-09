@@ -28,10 +28,10 @@ void printListing(int n, PhoneBook phonebook[]) {
         if (nickName.size() > 10) {
             nickName.replace(9, nickName.size() - 9, ".");
         }
-        std::cout << std::setw(10) << i << "|";
-        std::cout << std::setw(10) << firstName << "|";
-        std::cout << std::setw(10) << lastName << "|";
-        std::cout << std::setw(10) << nickName << std::endl;
+        std::cout << std::setw(10) << i << "|"
+        << std::setw(10) << firstName << "|"
+        << std::setw(10) << lastName << "|"
+        << std::setw(10) << nickName << std::endl;
     }
 }
 
@@ -47,7 +47,7 @@ void printEntry(int i, PhoneBook phonebook) {
     << LOVE"Birthdate"HATE": " << phonebook.getBirthDate() << std::endl
     << LOVE"Favourite Meal"HATE": " << phonebook.getFavouriteMeal() << std::endl
     << LOVE"Underwear Colour"HATE": " << phonebook.getUnderwearColour() << std::endl
-    << LOVE"Deepest, "BOLD"Darkest"DIM" Secret"HATE": " << phonebook.getDarkestSecret() << std::endl;
+    << LOVE"Deepest, "BOLD"Darkest"HATE LOVE" Secret"HATE": " << phonebook.getDarkestSecret() << std::endl;
 }
 
 void searchBook(int n, PhoneBook phonebook[]) {
@@ -58,11 +58,13 @@ void searchBook(int n, PhoneBook phonebook[]) {
     if (std::cin.eof()) {
         std::cerr << "\nPlease do not enter EOF~~" << std::endl;
         return;
-    } else if (std::cin.fail() || i >= n) {
+    } else if (std::cin.fail() || i < 0 || i >= n) {
         std::cout << "Whoopsie. That's not a valid entry." << std::endl;
     } else {
         printEntry(i, phonebook[i]);
     }
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 int main() {
