@@ -8,6 +8,8 @@
 
 class Peon : public Victim {
 
+private:
+    
     Peon();
 
 public:

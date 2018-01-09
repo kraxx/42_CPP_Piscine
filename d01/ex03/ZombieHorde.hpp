@@ -6,6 +6,7 @@
 class ZombieHorde {
     static const std::string _names[10];
     static const std::string _types[10];
+    static bool              _seeded;
     Zombie                   *_horde;
     int                      _num;
 

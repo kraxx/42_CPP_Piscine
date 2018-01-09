@@ -105,7 +105,12 @@ float Fixed::toFloat() const {
 };
 
 int Fixed::toInt() const {
-    return _fixedPoint >> _fracBits;
+
+    int x = _fixedPoint;
+
+    x >>= _fracBits - 1;
+    x += x % 2;
+    return x >> 1;
 };
 
 //Non-member functions

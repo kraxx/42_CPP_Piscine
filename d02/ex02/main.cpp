@@ -16,5 +16,10 @@ int main( void ) {
 
     std::cout << max( a, b ) << std::endl;
 
+    Fixed c(5.73f);
+
+    std::cout << c << std::endl;
+    std::cout << c.toInt() << std::endl;
+
     return 0;
 }

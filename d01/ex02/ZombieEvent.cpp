@@ -3,6 +3,8 @@
 #include <time.h>
 #include "ZombieEvent.hpp"
 
+bool ZombieEvent::_seeded = false;
+
 const std::string ZombieEvent::_names[10] = {
     "Albert",
     "Bruno",
@@ -16,8 +18,11 @@ const std::string ZombieEvent::_names[10] = {
     "Jung"
 };
 
-ZombieEvent::ZombieEvent() {
-    srand(time(NULL));
+ZombieEvent::ZombieEvent() {    
+    if (_seeded == false) {
+       srand(time(NULL));
+       _seeded = true;
+    }
     std::cout << "New zombie event initialized" << std::endl;
 };
 

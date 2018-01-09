@@ -8,6 +8,8 @@
 
 class Sorcerer {
 
+private:
+    
     std::string _name;
     std::string _title;
 

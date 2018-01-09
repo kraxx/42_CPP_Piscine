@@ -5,8 +5,9 @@
 # include "Zombie.hpp"
 
 class ZombieEvent {
-    static const std::string    _names[10];
-    std::string                 _type;
+    static const std::string _names[10];
+    static bool              _seeded;
+    std::string              _type;
 
 public:
     ZombieEvent();

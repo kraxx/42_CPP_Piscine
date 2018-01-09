@@ -3,6 +3,8 @@
 #include <time.h>
 #include "ZombieHorde.hpp"
 
+bool ZombieHorde::_seeded = false;
+
 const std::string ZombieHorde::_names[10] = {
     "Albert",
     "Bruno",
@@ -31,7 +33,10 @@ const std::string ZombieHorde::_types[10] = {
 
 ZombieHorde::ZombieHorde(int N) :
 _num(N) {
-    srand(time(NULL));
+    if (_seeded == false) {
+        srand(time(NULL));
+        _seeded = true;
+    }
     _horde = new Zombie[N]();
     for (int i = 0; i < N; i++) {
         _horde[i] = randomChump();

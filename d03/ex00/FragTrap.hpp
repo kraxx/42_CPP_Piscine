@@ -20,9 +20,9 @@ public:
 
     FragTrap();
     FragTrap(std::string name);
-    ~FragTrap();
     FragTrap(FragTrap const& rhs);
     FragTrap& operator=(FragTrap const& rhs);
+    ~FragTrap();
 
     void rangedAttack(std::string const& target);
     void meleeAttack(std::string const& target);
