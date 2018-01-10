@@ -28,6 +28,6 @@ public:
     void polymorph(Victim const& target) const;
 };
 
-#endif
-
 std::ostream& operator<<(std::ostream& output, Sorcerer const& rhs);
+
+#endif

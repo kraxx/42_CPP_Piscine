@@ -28,5 +28,3 @@ public:
 std::ostream& operator<<(std::ostream& output, Victim const& rhs);
 
 #endif
-
-
