@@ -25,6 +25,8 @@ public:
     virtual void getPolymorphed() const;
 };
 
+std::ostream& operator<<(std::ostream& output, Victim const& rhs);
+
 #endif
 
-std::ostream& operator<<(std::ostream& output, Victim const& rhs);
+
