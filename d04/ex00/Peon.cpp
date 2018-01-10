@@ -4,11 +4,10 @@
 #include "Peon.hpp"
 
 Peon::Peon() :
-Victim("Anon") {};
+Victim() {};
 
 Peon::Peon(std::string name) :
 Victim(name) {
-    // Victim::Victim(name);
     std::cout << "Zog zog." << std::endl;
 };
 

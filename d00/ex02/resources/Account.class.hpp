@@ -39,6 +39,9 @@ private:
 	static int	_totalNbDeposits;
 	static int	_totalNbWithdrawals;
 
+	// For the bonus
+	mutable int _bonus;
+
 	static void	_displayTimestamp( void );
 
 	int				_accountIndex;

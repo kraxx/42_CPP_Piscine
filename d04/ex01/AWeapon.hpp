@@ -1,33 +1,30 @@
 #ifndef AWEAPON_HPP
 # define AWEAPON_HPP
 
-# include <fstream>
-# include <iostream>
 # include <string>
-# include "Victim.hpp"
 
 class AWeapon {
 
-private:
+protected:
     
     std::string _name;
-    std::string _title;
+    int         _apcost;
+    int         _damage;
 
     AWeapon();
 
 public:
 
-    AWeapon(std::string name, std::string title);
+    AWeapon(std::string const& name, int apcost, int damage);
     AWeapon(AWeapon const& rhs);
     AWeapon& operator=(AWeapon const& rhs);
-    ~AWeapon();
+    virtual  ~AWeapon();
 
-    std::string getName() const;
-    std::string getTitle() const;
+    std::string  getName() const;
+    int          getAPCost() const;
+    int          getDamage() const;
 
-    void polymorph(Victim const& target) const;
+    virtual void attack() const = 0;
 };
 
 #endif
-
-std::ostream& operator<<(std::ostream& output, AWeapon const& rhs);
