@@ -5,17 +5,25 @@
 
 class Squad : public ISquad {
 
+private:
+
+    struct _marine {
+        ISpaceMarine*   unit;
+        struct _marine* next;
+    };
+    struct _marine*     _list;
+    int                 _listSize;
+
 public:
 
     Squad();
     Squad(Squad const& rhs);
+    Squad& operator=(Squad const& rhs);
     ~Squad();
 
-    Squad& operator=(Squad const& rhs);
-
-    int           getCount() const = 0;
-    int           push(ISpaceMarine* x) = 0;
-    ISpaceMarine* getUnit(int n) const = 0;
+    int           getCount() const;
+    int           push(ISpaceMarine* unit);
+    ISpaceMarine* getUnit(int n) const;
 };
 
 #endif
