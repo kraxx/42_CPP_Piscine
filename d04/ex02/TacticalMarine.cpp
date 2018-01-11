@@ -1,6 +1,4 @@
-#include <fstream>
 #include <iostream>
-#include <string>
 #include "TacticalMarine.hpp"
 
 TacticalMarine::TacticalMarine() {

@@ -10,6 +10,11 @@ int main() {
 
     a = Fixed( 1234.4321f );
     
+    Fixed x(a);
+
+    x = b;
+    x = c;
+
     std::cout << "a is " << a << std::endl;
     std::cout << "b is " << b << std::endl;
     std::cout << "c is " << c << std::endl;

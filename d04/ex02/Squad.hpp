@@ -23,6 +23,7 @@ public:
 
     int           getCount() const;
     int           push(ISpaceMarine* unit);
+    bool          checkDupe(ISpaceMarine* unit);
     ISpaceMarine* getUnit(int n) const;
 };
 
