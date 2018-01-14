@@ -20,7 +20,7 @@ int main() {
     a.rangedAttack("Mordecai");
     a.takeDamage(40);
     a.vaulthunter_dot_exe("Lilith");
-    a.beRepaired(65);
+    ((ClapTrap)a).beRepaired(65);
     a.vaulthunter_dot_exe("Roland");
     a.takeDamage(1000);
 
@@ -37,6 +37,12 @@ int main() {
 
     NinjaTrap nj = NinjaTrap("nerudo");
     nj.ninjaShoebox("susuk");
+
+
+
+std::cout << "\n\n\n\n";
+
+
 
     SuperTrap st = SuperTrap("Alex Ezzeddine");
     st.meleeAttack("Tuktuk");

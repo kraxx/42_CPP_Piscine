@@ -2,23 +2,20 @@
 # define ICE_HPP
 
 # include <string>
+# include "AMateria.hpp"
 # include "ICharacter.hpp"
 
 class Ice : public AMateria {
 
-private:
-
-    Ice();
-
 public:
 
-    Ice(std::string const& type);
+    Ice();
     Ice(Ice const& rhs);
     Ice& operator=(Ice const& Ice);
     ~Ice();
 
-    Ice*  clone();
-    void   use(ICharacter& target);
+    AMateria* clone() const;
+    void      use(ICharacter& target);
 };
 
 #endif

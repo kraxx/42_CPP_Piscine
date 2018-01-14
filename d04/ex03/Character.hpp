@@ -2,8 +2,8 @@
 # define CHARACTER_HPP
 
 # include <string>
-# include "ICharacter.hpp"
 # include "AMateria.hpp"
+# include "ICharacter.hpp"
 
 class Character : public ICharacter {
 
@@ -16,10 +16,10 @@ private:
 
 public:
 
-    Character(std::string name);
+    Character(std::string const& name);
     Character(Character const& rhs);
     Character& operator=(Character const& rhs);
-    ~Character() {};
+    ~Character();
     
     std::string const & getName() const;
     void equip(AMateria* m);

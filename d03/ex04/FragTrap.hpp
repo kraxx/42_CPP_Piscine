@@ -13,7 +13,7 @@ public:
     FragTrap(FragTrap const& rhs);
     FragTrap& operator=(FragTrap const& rhs);
     virtual ~FragTrap();
-
+    
     void rangedAttack(std::string const& target);
     void vaulthunter_dot_exe(std::string const& target);
 };

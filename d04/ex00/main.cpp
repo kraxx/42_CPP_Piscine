@@ -6,7 +6,7 @@
 
 int main()
 {
-    Sorcerer    robert("Robert", "theMagnificent");
+    Sorcerer    robert("Robert", "the Magnificent");
     Victim      jim("Jimmy");
     Peon        joe("Joe");
 

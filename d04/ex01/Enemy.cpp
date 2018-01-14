@@ -20,9 +20,7 @@ Enemy& Enemy::operator=(Enemy const& rhs) {
     return *this;
 };
 
-Enemy::~Enemy() {
-    std::cout << "DSUMBUDY DED" << std::endl;
-};
+Enemy::~Enemy() {};
 
 // Member methods
 

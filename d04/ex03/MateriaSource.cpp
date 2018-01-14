@@ -1,8 +1,15 @@
 #include <iostream>
 #include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 MateriaSource::MateriaSource() :
-_materia(NULL) {};
+_materia(){NULL, NULL, NULL, NULL} {
+
+    // for (int i = 0; i < 4; i++) {
+    //     _materia[i] = NULL;
+    // }
+};
 
 MateriaSource::MateriaSource(MateriaSource const& rhs) {
     *this = rhs;
@@ -34,6 +41,12 @@ void MateriaSource::learnMateria(AMateria* materia) {
 };
 
 AMateria* MateriaSource::createMateria(std::string const & type) {
-    AMateria* ret = new AMateria(type);
-    return ret;
+
+    if (type == "ice") {
+        return new Ice();
+    } else if (type == "cure") {
+        return new Cure();
+    }
+    // AMateria* ret = new AMateria(type);
+    return NULL;
 };

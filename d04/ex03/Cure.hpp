@@ -2,23 +2,20 @@
 # define CURE_HPP
 
 # include <string>
+# include "AMateria.hpp"
 # include "ICharacter.hpp"
 
 class Cure : public AMateria {
 
-private:
-
-    Cure();
-
 public:
 
-    Cure(std::string const& type);
+    Cure();
     Cure(Cure const& rhs);
     Cure& operator=(Cure const& cure);
     ~Cure();
 
-    Cure*  clone();
-    void   use(ICharacter& target);
+    AMateria* clone() const;
+    void      use(ICharacter& target);
 };
 
 #endif

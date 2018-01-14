@@ -26,7 +26,7 @@ public:
     virtual ~ClapTrap();
 
     void takeDamage(unsigned int amount);
-    void beRepaired(unsigned int amount);
+    virtual void beRepaired(unsigned int amount);
     virtual void rangedAttack(std::string const& target);
     virtual void meleeAttack(std::string const& target);
 };

@@ -1,5 +1,10 @@
 #include <iostream>
 #include "AMateria.hpp"
+// #include "Ice.hpp"
+// #include "Cure.hpp"
+
+// class Ice;
+// class Cure;
 
 AMateria::AMateria() :
 _xp(0) {};
@@ -28,14 +33,13 @@ unsigned int       AMateria::getXP() const {
     return _xp;
 };
 
-// AMateria*  AMateria::clone() {
+void               AMateria::use(ICharacter& target) {
 
-//     AMateria* ret = new AMateria::AMateria(_type);
-//     return ret;
-// };
-
-// void       AMateria::use(ICharacter& target) {
-    
-//     (void)target;
-//     _xp += 10;
-// };
+    _xp += 10;
+    // if (_type == "ice") {
+    //     Ice::use(target);
+    // } else if (_type == "cure") {
+    //     Cure::use(target);
+    // }
+    (void)target;
+};

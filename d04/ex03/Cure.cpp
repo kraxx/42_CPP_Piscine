@@ -1,11 +1,9 @@
 #include <iostream>
 #include "Cure.hpp"
-#include "ICharacter.hpp"
 
-Cure::Cure() {};
-
-Cure::Cure(std::string const& type) :
-_xp(0), _type(type) {};
+Cure::Cure() :
+// _xp(0), _type("cure") {};
+AMateria("cure") {};
 
 Cure::Cure(Cure const& rhs) {
     *this = rhs;
@@ -20,22 +18,16 @@ Cure& Cure::operator=(Cure const& rhs) {
 
 Cure::~Cure() {};
 
-std::string const& Cure::getType() const {
-    return _type;
-};
+AMateria*  Cure::clone() const {
 
-unsigned int       Cure::getXP() const {
-    return _xp;
-};
-
-Cure*  Cure::clone() {
-
-    Cure* ret = new Cure::Cure(_type);
+    AMateria* ret = new Cure();
+    // AMateria* ret = new AMateria(_type);
+    // AMateria* ret = new AMateria("cure");
     return ret;
 };
 
 void       Cure::use(ICharacter& target) {
 
     _xp += 10;
-    std::cout << "* heals " << target << "'s wounds *" << std::endl;
+    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 };

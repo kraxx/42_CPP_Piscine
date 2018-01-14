@@ -1,11 +1,15 @@
 #include <iostream>
 #include "Character.hpp"
 
-Character::Character() :
-_materia(NULL) {};
+Character::Character() {};
 
 Character::Character(std::string const& name) :
-_name(name), _materia(NULL) {};
+_name(name), AMateria*():_materia{NULL, NULL, NULL, NULL}{} {
+
+    // for (int i = 0; i < 4; i++) {
+    //     _materia[i] = NULL;
+    // }
+};
 
 Character::Character(Character const& rhs) {
     *this = rhs;
@@ -52,7 +56,7 @@ void Character::unequip(int idx) {
 
 void Character::use(int idx, ICharacter& target) {
 
-    if (_materia[idx] != NULL && target != NULL) {
-        AMateria::use(_materia[idx]);
+    if (_materia[idx] != NULL) {
+        _materia[idx]->use(target);
     }
 };

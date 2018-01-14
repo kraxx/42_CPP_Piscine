@@ -1,10 +1,9 @@
 #include <iostream>
 #include "Ice.hpp"
 
-Ice::Ice() {};
-
-Ice::Ice(std::string const& type) :
-_xp(0), _type(type) {};
+Ice::Ice() :
+// _xp(0), _type("ice") {};
+AMateria("ice") {};
 
 Ice::Ice(Ice const& rhs) {
     *this = rhs;
@@ -19,22 +18,16 @@ Ice& Ice::operator=(Ice const& rhs) {
 
 Ice::~Ice() {};
 
-std::string const& Ice::getType() const {
-    return _type;
-};
+AMateria*  Ice::clone() const {
 
-unsigned int       Ice::getXP() const {
-    return _xp;
-};
-
-Ice*  Ice::clone() {
-
-    Ice* ret = new Ice::Ice(_type);
+    AMateria* ret = new Ice();
+    // AMateria* ret = new AMateria("ice");
+    // AMateria* ret = new AMateria(_type);
     return ret;
 };
 
 void       Ice::use(ICharacter& target) {
 
     _xp += 10;
-    std::cout << "* shoots an ice bolt at " << target << " *" << std::endl;
+    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 };
