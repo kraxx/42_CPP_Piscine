@@ -12,10 +12,21 @@
 
 NAME = 		ft_retro
 
-SRC = 		main \
-			Character.class
+SRC = 		Bullet \
+			Character \
+			Enemy \
+			Player \
+			GameEntity \
+			main \
+			Game 
 
-HDR =		header
+HDR =		Bullet \
+			Character \
+			Enemy \
+			Player \
+			GameEntity \
+			Header \
+			Game
 
 SRC_DIR =		src/
 SRC_C =			$(addsuffix .cpp, $(SRC))
@@ -25,8 +36,8 @@ OBJ_DIR =		obj/
 OBJ_O =			$(addsuffix .o, $(SRC))
 OBJ_FILES =		$(addprefix $(OBJ_DIR), $(OBJ_O))
 
-HDR_DIR =		include/
-HDR_H =			$(addsuffix .h, $(HDR))
+HDR_DIR =		inc/
+HDR_H =			$(addsuffix .hpp, $(HDR))
 HDR_FILES = 	$(addprefix $(HDR_DIR), $(HDR_H))
 
 CC =			clang++
@@ -53,7 +64,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
 	@echo "$(YELLOW_LIGHT)$(NAME): $(YELLOW)Compiling $(NAME)...$(END_COLOUR)"
-	@$(CC) $(C_FLAGS) $^ -o $@
+	@$(CC) $(C_FLAGS) $^ -o $@ -lncurses
 	@echo "$(YELLOW_LIGHT)$(NAME): $(GREEN)Successfully compiled $(NAME)!$(END_COLOUR)"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
