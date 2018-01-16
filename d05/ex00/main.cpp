@@ -5,8 +5,8 @@
 
 int main() {
 
-    Bureaucrat a("Small", -12);
-    Bureaucrat b("Large", 169);
+    // Bureaucrat a("Small", -12);
+    // Bureaucrat b("Large", 169);
     Bureaucrat c("Average Joe", 50);
 
     c.getName();
