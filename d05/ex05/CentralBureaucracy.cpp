@@ -25,7 +25,7 @@ const char* CentralBureaucracy::WaitSpaceFullException::what() const throw() {
 }
 
 /*****************************************
-*********CENTRALBUREAUCRACYy *************
+********* CENTRAL BUREAUCRACY ************
 *****************************************/
 
 // Coplien methods
