@@ -45,17 +45,17 @@ Form*   Intern::makeForm(std::string name, std::string target) {
     try {
         if (name == "ShrubberyCreationForm") {
 
-            std::cout << "Intern creates " << name << std::endl;
+            std::cout << "Intern creates " << name << " targeting " << target << std::endl;
             return new ShrubberyCreationForm(target);
 
         } else if (name == "RobotomyRequestForm") {
 
-            std::cout << "Intern creates " << name << std::endl;
+            std::cout << "Intern creates " << name << " targeting " << target << std::endl;
             return new RobotomyRequestForm(target);
 
         } else if (name == "PresidentialPardonForm") {
 
-            std::cout << "Intern creates " << name << std::endl;
+            std::cout << "Intern creates " << name << " targeting " << target << std::endl;
             return new PresidentialPardonForm(target);
         } else {
 

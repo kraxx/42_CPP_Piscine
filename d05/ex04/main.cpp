@@ -18,12 +18,14 @@ int main() {
     OfficeBlock ob;
 
     ob.setSigner(a);
-    ob.setExecutor(b);
+    // ob.setExecutor(b);
     ob.setIntern(i);
 
-    ob.doBureaucracy("PresidentialPardonForm", "Zuck Faphod");
-
-
+    try {
+        ob.doBureaucracy("RobotomyRequestForm", "BeepBoop");
+    } catch(std::exception& e) {
+        std::cerr << "Error doing bureaucracy; " << e.what() << std::endl;
+    }
 
     std::cout << "Done" << std::endl;
 }

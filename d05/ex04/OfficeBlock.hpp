@@ -16,6 +16,44 @@ private:
 
 public:
 
+    // Exceptions
+
+    class MissingInternException : public std::exception {
+
+    public:
+
+        MissingInternException() {};
+        MissingInternException(MissingInternException const& rhs);
+        MissingInternException& operator=(MissingInternException const& rhs);
+        virtual ~MissingInternException() throw() {};
+
+        virtual const char* what() const throw();
+    };
+
+    class MissingSignerException : public std::exception {
+
+    public:
+
+        MissingSignerException() {};
+        MissingSignerException(MissingSignerException const& rhs);
+        MissingSignerException& operator=(MissingSignerException const& rhs);
+        virtual ~MissingSignerException() throw() {};
+
+        virtual const char* what() const throw();
+    };
+
+    class MissingExecutorException : public std::exception {
+
+    public:
+
+        MissingExecutorException() {};
+        MissingExecutorException(MissingExecutorException const& rhs);
+        MissingExecutorException& operator=(MissingExecutorException const& rhs);
+        virtual ~MissingExecutorException() throw() {};
+
+        virtual const char* what() const throw();
+    };
+
     // Coplien methods
 
     OfficeBlock();
