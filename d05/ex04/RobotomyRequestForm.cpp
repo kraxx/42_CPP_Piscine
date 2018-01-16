@@ -1,4 +1,5 @@
 #include <ctime>
+#include <stdlib.h>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -18,7 +19,7 @@ Form("RobotomyRequestForm", 72, 45), _target(target) {
 
     if (_seeded == false) {
         _seeded = true;
-        srand(time(nullptr));
+        srand(time(NULL));
     }
 }
 

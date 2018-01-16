@@ -4,8 +4,8 @@
 # include <iostream>
 # include <stdexcept>
 # include <string>
-# include "Form.hpp"
-
+# include "Bureaucrat.hpp"
+# include "Intern.hpp"
 class OfficeBlock {
 
 private:
@@ -16,33 +16,10 @@ private:
 
 public:
 
-    // Exceptions
-
-    class GradeTooHighException : public std::exception {
-
-    public:
-
-        GradeTooHighException() {};
-        GradeTooHighException(GradeTooHighException const& rhs);
-        GradeTooHighException& operator=(GradeTooHighException const& rhs);
-        virtual ~GradeTooHighException() throw() {};
-
-        virtual const char* what() const throw();
-    };
-
-    class GradeTooLowException : public std::exception {
-
-    public:
-
-        GradeTooLowException() {};
-        virtual ~GradeTooLowException() throw() {};
-
-        virtual const char* what() const throw();
-    };
-
     // Coplien methods
 
     OfficeBlock();
+    OfficeBlock(Bureaucrat* signer, Bureaucrat* executor, Intern* intern);
     ~OfficeBlock() {};
 
     // Getters
@@ -50,6 +27,12 @@ public:
     Bureaucrat* getSigner() const;
     Bureaucrat* getExecutor() const;
     Intern*     getIntern() const;
+
+    // Setters
+
+    void        setSigner(Bureaucrat& signer);
+    void        setExecutor(Bureaucrat& executor);
+    void        setIntern(Intern& intern);
  
     // Methods
 

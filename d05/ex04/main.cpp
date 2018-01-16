@@ -4,20 +4,26 @@
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "OfficeBlock.hpp"
 #include <iostream>
 #include <string>
 
 
 int main() {
 
-    Intern i;
+    Bureaucrat a("Alfred", 50);
+    Bureaucrat b("Benny", 5);
+    Intern     i;
 
-    Form* f;
+    OfficeBlock ob;
 
-    f = i.makeForm("RobotomyRequestForm", "hot bots");
-    f = i.makeForm("ShrubberyCreationForm", "hot pots");
-    f = i.makeForm("PresidentialPardonForm", "hot nots");
-    f = i.makeForm("FakestForm", "F4k3lyf3");
+    ob.setSigner(a);
+    ob.setExecutor(b);
+    ob.setIntern(i);
+
+    ob.doBureaucracy("PresidentialPardonForm", "Zuck Faphod");
+
+
 
     std::cout << "Done" << std::endl;
 }
