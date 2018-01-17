@@ -14,11 +14,11 @@ int main() {
 	list.push_back(6);
 	list.push_back(7);
 
-	// int arr[] = {1, 2, 3, 4, 5, 6, 7};
-
-	std::list<int> ret =  easyfind(list, 2);
-
-	std::cout << ret << std::endl;
+	try {
+		std::cout << easyfind(list, 5) << std::endl;
+	} catch(std::exception& e) {
+		std::cerr << e.what() << std::endl;
+	}
 
 	return 0;
 }

@@ -2,9 +2,10 @@
 # define EASYFIND_HPP
 
 # include <iostream>
+# include <stdexcept>
 
 template<typename T>
-T& easyfind(T list, int n) {
+int easyfind(T& list, int n) {
 
 	typename T::iterator it;
 
@@ -14,8 +15,8 @@ T& easyfind(T list, int n) {
 		std::cerr << e.what() << std::endl;
 	}
 	if (it == list.end())
-		return nullptr;
-	return it;
+		throw std::logic_error("Item not found in list");
+	return *it;
 }
 
 #endif
