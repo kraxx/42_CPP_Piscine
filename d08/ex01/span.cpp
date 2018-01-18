@@ -1,9 +1,9 @@
 #include "span.hpp"
 #include <vector>
 #include <stdexcept>
-#include <numeric>
-// #include <algorithm>
-// #include <list>
+#include <limits>
+
+#include <iostream>
 
 Span::Span(unsigned int size):
 _size(size) {
@@ -31,36 +31,40 @@ void 		 Span::addNumber(int n) {
 
 unsigned int Span::shortestSpan() {
 
-	std::vector<int>::iterator max;
-	std::vector<int>::iterator min;
-	std::vector<int> 		   tmp;
-
+	int min = INT_MAX;
+	int diff;
+	std::vector<int>::iterator it = _intArr.begin();
+	std::vector<int>::iterator it2 = it + 1;
+	std::vector<int>::iterator end = _intArr.end();
 
 	if (_intArr.size() > 1) {
-		tmp = _intArr;
-
-		
-		max = std::max_element(_intArr.begin(), _intArr.end());
-		min = std::min_element(_intArr.begin(), _intArr.end());
+		for (; it2 != end; it++, it2++) {
+			diff = abs(*it - *it2);
+			if (diff > 0 && diff < min) {
+				min = diff;
+			}
+		}
 	} else {
 		throw std::logic_error("Error: container has 1 or less contents");
 	}
-	return std::distance(max, min);
+
+	if (min == INT_MAX) {
+		return 0;
+	} else {
+		return min;
+	}
 }
 
 unsigned int Span::longestSpan() {
 
-	std::vector<int>::iterator max;
-	std::vector<int>::iterator min;
-	std::vector<int> 		   tmp;
+	int max;
+	int min;
 
 	if (_intArr.size() > 1) {
-		tmp = _intArr;
-		std::sort(tmp.begin(), tmp.end());
-		max = std::max_element(tmp.begin(), tmp.end());
-		min = std::min_element(tmp.begin(), tmp.end());
+		max = *std::max_element(_intArr.begin(), _intArr.end());
+		min = *std::min_element(_intArr.begin(), _intArr.end());
 	} else {
 		throw std::logic_error("Error: container has 1 or less contents");
 	}
-	return std::distance(min, max);
+	return (max - min);
 }
