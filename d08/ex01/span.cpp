@@ -37,6 +37,7 @@ unsigned int Span::shortestSpan() {
 	std::vector<int>::iterator it =  tmp.begin();
 	std::vector<int>::iterator it2 = it + 1;
 	std::vector<int>::iterator end = tmp.end();
+	
 	if (tmp.size() > 1) {
 		std::sort(tmp.begin(), tmp.end());
 		for (; it2 != end; it++, it2++) {
