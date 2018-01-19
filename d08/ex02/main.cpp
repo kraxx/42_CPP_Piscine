@@ -3,20 +3,8 @@
 #include <vector>
 #include "mutantstack.hpp"
 
-// int main() {
-
-// 	MutantStack<int> m;
-
-// 	m.push(1);
-// 	m.push(2);
-// 	m.push(3);
-// 	m.push(4);
-
-// 	// std::cout << m.pop() << std::endl;you ca
-// }
-
 int main() {
-	
+
 	MutantStack<int> mstack;
 
 	mstack.push(5);

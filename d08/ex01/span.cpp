@@ -33,11 +33,12 @@ unsigned int Span::shortestSpan() {
 
 	int min = INT_MAX;
 	int diff;
-	std::vector<int>::iterator it = _intArr.begin();
+	std::vector<int>		   tmp = _intArr;
+	std::vector<int>::iterator it =  tmp.begin();
 	std::vector<int>::iterator it2 = it + 1;
-	std::vector<int>::iterator end = _intArr.end();
-
-	if (_intArr.size() > 1) {
+	std::vector<int>::iterator end = tmp.end();
+	if (tmp.size() > 1) {
+		std::sort(tmp.begin(), tmp.end());
 		for (; it2 != end; it++, it2++) {
 			diff = abs(*it - *it2);
 			if (diff > 0 && diff < min) {
