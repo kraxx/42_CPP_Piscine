@@ -1,6 +1,6 @@
 # Retro Space Shooter
 
-Built in 2 days, [Sam](https://github.com/scollet1) and I built a classic arcade space shooter.
+Over 2 days, [Sam](https://github.com/scollet1) and I built a classic arcade space shooter.
 
 #### Getting started
 To compile the binary:
